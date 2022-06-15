@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>텍스트 치환하기</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+	<!-- 좌측 textarea -->
+	<div>
+		<textarea id="beforeText"></textarea>
+	</div>
+	
+	<!-- 우측 상단 -->
+	<div>
+		<textarea id="inputText"></textarea>	
+		<button type="button" id="changBtn">변환하기</button>
+	</div>
+
+	<!-- 우측 하단 -->
+	<div>
+		<textarea id="changeText"></textarea>
+	</div>
+
+</body>
+<script type="text/javascript">
+	$("#changBtn").click(function(){
+		var beforeText = $("#beforeText").val();
+		var inputText = $("#inputText").val();
+		
+		//엔터키
+		var arrn = beforeText.split("\n");
+		
+		for (i = 0; i < arrn.length; i++){
+			//탭키  
+			var arrt = arrn[i].split("\t");
+			for (j = 0; j < arrt.lenght; j++){
+			}
+			var cnangeText = inputText.replace('${1}', arrn[i]);
+			$("#changeText").val(cnangeText);
+		}
+		 
+		
+		
+	});
+</script>
+</html>
