@@ -7,7 +7,7 @@ public class random {
 	
 	
 	public static void main(String[] args) {
-			
+			//f
 		Scanner scan = new Scanner(System.in);
 		
 		int num = scan.nextInt();
